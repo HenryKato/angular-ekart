@@ -1,0 +1,24 @@
+<div class="ekart--product--container">
+<!--  <p>Name: {{ product.name }}</p>-->
+<!--  <p>Price: ${{ product.price }}</p>-->
+<!--  <p>Color: {{ product.color }}</p>-->
+<!--  <p>Discount: {{ getDiscountedPrice().toFixed(2) }}</p>-->
+<!--  <p>{{ product.stock > 0 ? 'Only ' + product.stock + ' items left' : 'Not in Stock' }}</p>-->
+<!--  <button [disabled] = "(product.stock<1)">Buy Now</button>-->
+<!--  <input type="text" [value]="name" (input)="typedName($event)">-->
+<!--  <p>Entered name: {{name}}</p>-->
+<!--  <button [disabled]="addToCart===0" (click)="decrement($event)">-</button>-->
+<!--  <span>{{addToCart}}</span>-->
+<!--  <button [disabled]="addToCart===product.stock" (click)="increment($event)">+</button>-->
+  <app-search (searchTextEvent)="onSearchTextEntered($event)"></app-search>
+  <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+<!--  <div *ngFor="let item of [3,2,8,7,5,4]">-->
+<!--    <p>Current item is: {{ item }}</p>-->
+<!--  </div>-->
+  <product-details [selectedProduct]="productListComponent.selectedProduct" *ngIf="productListComponent.selectedProduct"></product-details>
+</div>
+
+
+
+<!--Use property binding to assign a dynamic value to an HTML tag property-->
+<!--See binding attributes == uses [attr.attribute_name]-->
