@@ -10,7 +10,7 @@ export class SearchComponent {
   @Output()
   searchTextEvent: EventEmitter<string> = new EventEmitter<string>();
 
-  @ViewChild('searchInput') searchInputElement: ElementRef;
+  @ViewChild('searchInput') searchInputElement: ElementRef; //Assign a reference of an HTMLElement to a property in component.ts file
   getSearchText() {
     this.searchText = this.searchInputElement.nativeElement.value;
     this.searchTextEvent.emit(this.searchText);

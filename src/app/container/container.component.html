@@ -15,7 +15,7 @@
 <!--  <div *ngFor="let item of [3,2,8,7,5,4]">-->
 <!--    <p>Current item is: {{ item }}</p>-->
 <!--  </div>-->
-  <product-details [selectedProduct]="productListComponent.selectedProduct" *ngIf="productListComponent.selectedProduct"></product-details>
+  <product-details [productListComponent]="productListComp" [product]="productListComponent.selectedProduct" *ngIf="productListComponent.selectedProduct"></product-details>
 </div>
 
 

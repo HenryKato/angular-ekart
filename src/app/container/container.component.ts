@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Product} from "./product-list/product/product";
+import {ProductListComponent} from "./product-list/product-list.component";
 
 @Component({
   selector: 'app-container',
@@ -10,7 +11,7 @@ export class ContainerComponent {
   name = 'HK';
   addToCart: number = 0;
   searchText: string = '';
-  selectedProduct: Product;
+  @ViewChild('productListComponent')productListComp: ProductListComponent;
   product = {
     name: 'iPhone 13',
     price: 999,
